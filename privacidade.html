@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="foot_priv">Política de Privacidade │ Kauan Santana</title>
+    
+    <link rel="icon" type="image/jpeg" href="imagens/icone.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kauan Santana<span class="destaque"> | Full Stack</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="priv_back">Voltar para o Início</a></li>
+                
+                <li class="settings-menu">
+                    <button id="settings-btn" aria-label="Configurações">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </button>
+                    
+                    <div id="settings-dropdown" class="dropdown-content hidden">
+                        <div class="setting-group">
+                            <label data-i18n="config_theme">Tema:</label>
+                            <select id="theme-select">
+                                <option value="dark" data-i18n="theme_dark">Dark</option>
+                                <option value="light" data-i18n="theme_light">Light</option>
+                            </select>
+                        </div>
+                        <div class="setting-group">
+                            <label data-i18n="config_lang">Idioma:</label>
+                            <select id="lang-select">
+                                <option value="pt">Português</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <h1 data-i18n="priv_h1">Política de privacidade</h1>
+            <p class="privacy-subtitle" data-i18n="priv_sub">Como lido com seus dados</p>
+
+            <p data-i18n="priv_p1">Este site não coleta nenhum dado pessoal. Ele não define nenhum cookie e não usa nenhum script de rastreamento de terceiros. Nenhuma análise de usuário ou outra métrica é processada durante a sua visita, e o servidor não grava nenhum arquivo de log, o que significa que seu endereço IP não é armazenado em nenhum lugar.</p>
+            
+            <p data-i18n="priv_p2">No fundo é só um conteúdo livre, sem amarras.</p>
+
+            <h2 data-i18n="priv_h2">Transferência Segura de Dados</h2>
+            <p data-i18n="priv_p3">Este site se transmite por meio de HTTPS, criptografando todos os dados entre o navegador e o servidor. Seu provedor de rede ainda pode ser capaz de ver que você está carregando arquivos a partir deste site, mas não o seu conteúdo. Isso também protege você de terceiros interceptando dados por exemplo, enquanto navega em WiFi público, ou provedores de rede injetando anúncios neste site.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-texto">
+                <p data-i18n="foot_copy">&copy; 2026 Kauan Santana. Todos os direitos reservados.</p>
+                <p data-i18n="foot_dev">Desenvolvido por <span>Kauan Santana | Full Stack</span>.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#inicio" data-i18n="nav_home">Início</a>
+                <a href="#sobre" data-i18n="nav_about">Sobre</a>
+                <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+                <a href="#projetos" data-i18n="nav_projects">Projetos</a>
+                <a href="https://www.linkedin.com/in/kauan-santana-ab8915325/details/certifications/" target="_blank" data-i18n="nav_certs">Certificados</a>
+                <a href="#contato" data-i18n="nav_contact">Contato</a>
+                <a href="privacidade.html" data-i18n="foot_priv">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
