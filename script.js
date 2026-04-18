@@ -84,7 +84,7 @@ const translations = {
         p_data: "Estudo de caso em ciência de dados utilizando Pandas para analisar o cancelamento de clientes (Churn). O projeto limpa dados, identifica gargalos e simula ações preditivas baseadas em padrões.",
         p_drink: "Plataforma web de e-commerce e gestão. Possui área do cliente para compras e um painel administrativo robusto com controle de acesso para gerenciar pedidos, usuários e estoque de forma segura.",
         p_zoo: "Plataforma interativa para preservação da fauna. Foco total em UX/UI, utilizando jQuery para componentes dinâmicos (carrosséis, datepicker) e sistema de gamificação com quiz integrado.",
-        
+        p_portifolio: "Meu portifólio profissional, apresentando projetos e habilidades desenvolvidas ao longo da minha carreira como desenvolvedor.",
         contact_title: "Entre em Contato",
         contact_sub: "Tem um projeto em mente?",
         contact_desc: "Estou disponível para novos desafios e oportunidades. Se você precisa de um desenvolvedor para tirar sua ideia do papel ou otimizar processos na sua empresa, me mande uma mensagem!",
@@ -136,7 +136,7 @@ const translations = {
         p_data: "Data science case study using Pandas to analyze customer churn. The project cleans data, identifies bottlenecks, and simulates predictive actions based on patterns.",
         p_drink: "Web e-commerce and management platform. Features a customer area for purchases and a robust administrative panel with access control to securely manage orders, users, and inventory.",
         p_zoo: "Interactive platform for wildlife preservation. Strong focus on UX/UI, using jQuery for dynamic components (carousels, datepicker) and a gamification system with an integrated quiz.",
-        
+        p_portifolio: "My professional portfolio, showcasing projects and skills developed throughout my career as a developer.",
         contact_title: "Get in Touch",
         contact_sub: "Have a project in mind?",
         contact_desc: "I am available for new challenges and opportunities. If you need a developer to bring your idea to life or optimize processes in your company, send me a message!",
