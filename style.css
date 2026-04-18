@@ -1188,3 +1188,41 @@ footer {
     opacity: 1;
     transform: translateY(0); 
 }
+
+/* Garante que o nav de privacidade não suma no mobile */
+.nav-privacidade {
+    display: block !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+}
+
+.btn-voltar {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    color: var(--accent-color);
+}
+
+/* Ajuste específico para mobile */
+@media (max-width: 992px) {
+    .nav-privacidade ul {
+        padding: 0 !important;
+        flex-direction: row !important;
+    }
+    
+    /* Esconde o texto no mobile e deixa só o ícone + "Voltar" se o espaço for curto */
+    .btn-voltar {
+        font-size: 0.8rem;
+    }
+}
