@@ -90,7 +90,7 @@ header {
     border-bottom: 1px solid var(--border-color); 
     position: sticky; 
     top: 0;
-    z-index: 100;     
+    z-index: 100;    
     transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
@@ -108,6 +108,16 @@ header .logo {
 header .logo .destaque {
     color: var(--accent-color); 
     font-weight: 600;
+}
+
+/* MENU MOBILE (BOTÃO HAMBURGUER) */
+/* Escondido por padrão no desktop */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
 }
 
 nav ul {
@@ -253,7 +263,7 @@ body.light-mode .setting-group select {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row; /* Textos e Imagem lado a lado */
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
     gap: 50px; 
@@ -263,7 +273,7 @@ body.light-mode .setting-group select {
 
 .hero-texto {
     flex: 1.2; 
-    text-align: left; /* Alinhamento para a esquerda */
+    text-align: left; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -282,16 +292,14 @@ body.light-mode .setting-group select {
     color: var(--accent-color);
 }
 
-/* Novo Texto de Boas-Vindas */
 .hero-welcome {
     font-size: 1.15rem;
     color: var(--text-muted);
-    margin-bottom: 30px; /* Espaço para respirar antes da citação */
+    margin-bottom: 30px; 
     max-width: 100%;
     line-height: 1.7;
 }
 
-/* Container do Efeito de Digitação (Citação) */
 .typing-container {
     font-size: 1.15rem;
     color: var(--text-main);
@@ -300,7 +308,7 @@ body.light-mode .setting-group select {
     line-height: 1.6;
     min-height: 60px;
     font-style: italic;
-    border-left: 4px solid var(--accent-color); /* Destaque visual */
+    border-left: 4px solid var(--accent-color); 
     padding-left: 20px;
     background: linear-gradient(90deg, rgba(37, 99, 235, 0.05) 0%, rgba(0,0,0,0) 100%);
     padding-top: 10px;
@@ -338,7 +346,6 @@ body.light-mode .setting-group select {
     justify-content: flex-start;
 }
 
-/* Ajuste da Imagem na Coluna da Direita */
 .hero-imagem {
     flex: 1; 
     display: flex;
@@ -513,17 +520,17 @@ body.light-mode .hero-banner {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--accent-color); /* Usa a cor de destaque do seu tema */
-    z-index: -1; /* Joga o fundo para trás do texto */
-    transform: scaleX(0); /* Esconde o fundo no eixo X */
-    transform-origin: left; /* Faz o efeito começar da esquerda */
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Animação super suave */
+    background-color: var(--accent-color); 
+    z-index: -1; 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
 .sobre-skills li:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    color: #ffffff; /* O texto fica branco para leitura no fundo azul */
+    color: #ffffff; 
     border-color: var(--accent-color);
 }
 
@@ -549,7 +556,6 @@ body.light-mode .hero-banner {
     justify-content: center;
     align-items: center;
 }
-
 
 .sobre-foto img {
     max-width: 100%;
@@ -706,7 +712,7 @@ body.light-mode .skill-badge {
     display: flex;
     gap: 10px;
     margin-top: auto; 
-    margin-top: 25px;
+    padding-top: 25px;
 }
 
 .btn-sm {
@@ -1011,13 +1017,13 @@ footer {
 @media (max-width: 992px) {
     /* Ajustes do Início (Hero) */
     .hero-container {
-        flex-direction: column; /* Empilha no celular */
+        flex-direction: column; 
         gap: 30px;
         padding-top: 40px;
     }
 
     .hero-texto {
-        text-align: center; /* Volta a centralizar no mobile */
+        text-align: center; 
         align-items: center;
     }
 
@@ -1031,7 +1037,7 @@ footer {
     }
 
     .typing-container {
-        text-align: left; /* Mantém a citação alinhada à esquerda mesmo no mobile por causa da borda */
+        text-align: left; 
         width: 100%;
         font-size: 1.15rem;
     }
@@ -1091,20 +1097,16 @@ footer {
        AJUSTES DO CABEÇALHO E MENU MOBILE
     ========================================= */
     header {
-        padding: 20px 25px; /* Reduz o padding para caber na tela */
+        padding: 20px 25px; 
     }
 
     header .logo {
-        font-size: 1.3rem; /* Diminui a fonte para evitar quebra de linha */
-        white-space: nowrap; /* Força a logo a ficar em uma linha só */
+        font-size: 1.3rem; 
+        white-space: nowrap; 
     }
 
     .menu-toggle {
-        display: block; /* Mostra o botão Hamburguer no celular */
-        background: none;
-        border: none;
-        color: var(--text-main);
-        cursor: pointer;
+        display: block; 
     }
 
     nav {
@@ -1115,14 +1117,12 @@ footer {
         background-color: var(--header-bg);
         border-bottom: 1px solid var(--border-color);
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        /* Esconde o menu por padrão */
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.3s ease;
     }
 
-    /* Classe ativada pelo JavaScript para abrir o menu */
     nav.menu-aberto {
         opacity: 1;
         visibility: visible;
@@ -1179,8 +1179,8 @@ footer {
 ========================================= */
 .reveal {
     opacity: 0;
-    transform: translateY(50px); /* Aumentei levemente a distância para um deslize mais nítido */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* ease-out deixa o final do movimento super suave */
+    transform: translateY(50px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
     will-change: opacity, transform; 
 }
 
@@ -1221,7 +1221,6 @@ footer {
         flex-direction: row !important;
     }
     
-    /* Esconde o texto no mobile e deixa só o ícone + "Voltar" se o espaço for curto */
     .btn-voltar {
         font-size: 0.8rem;
     }
