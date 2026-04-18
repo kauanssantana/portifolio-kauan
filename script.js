@@ -59,7 +59,7 @@ const translations = {
         hero_title: "Desenvolvedor Full Stack.",
         hero_welcome: "Seja bem-vindo! Preparei este espaço para que você conheça de perto o meu trabalho. Aqui irei compartilhar um pouco sobre minha vida pessoal e profissional, apresentarei as tecnologias que utilizo no dia a dia junto com os projetos que venho construindo nesse caminho.",
         hero_quote: "Programação é a arte de encontrar soluções elegantes para problemas complexos.",
-        // NOVO TEXTO DE APOIO AQUI:
+
         hero_desc_new: "Especializado em arquiteturas escaláveis, automações inteligentes e inteligência de dados. Transformo lógica de programação em aplicações reais que otimizam processos utilizando o poder do JavaScript, Python e PHP.",
         hero_btn1: "Explorar Projetos", 
         
@@ -111,7 +111,7 @@ const translations = {
         hero_title: "Full Stack Developer.",
         hero_welcome: "Welcome! I prepared this space so you can get a closer look at my work. Here I will share a bit about my personal and professional life, present the technologies I use daily, along with the projects I've been building along the way.",
         hero_quote: "Programming is the art of finding elegant solutions to complex problems.",
-        // NOVO TEXTO DE APOIO AQUI:
+
         hero_desc_new: "Specialized in scalable architectures, smart automations, and data intelligence. I transform programming logic into real-world applications that optimize processes leveraging the power of JavaScript, Python, and PHP.",
         hero_btn1: "Explore Projects",
         
@@ -167,7 +167,7 @@ let typingTimeout;
 function typeWriter(text, i) {
     if (i < text.length) {
         typingElement.innerHTML += text.charAt(i);
-        // Aumentado de 40 para 80 milissegundos
+
         typingTimeout = setTimeout(() => typeWriter(text, i + 1), 80); 
     }
 }
@@ -231,7 +231,6 @@ if(backToTopBtn) {
 // ANIMAÇÃO DE SCROLL (REVEAL EFFECT) - CLEAN
 // ==========================================
 
-// 1. Selecionamos os blocos principais para animar inteiros (sem quebrar em itens pequenos)
 const elementsToReveal = document.querySelectorAll(`
     .sobre-header, .sobre-texto p, .sobre-botoes, .sobre-foto, 
     .sobre-skills, /* Anima a lista inteira de uma vez */
@@ -240,23 +239,21 @@ const elementsToReveal = document.querySelectorAll(`
     .contato-header, .contato-info, .contato-form
 `);
 
-// 2. Adiciona a classe base de revelação (sem delays/cascatas)
 elementsToReveal.forEach((el) => {
     el.classList.add('reveal');
 });
 
-// 3. Configura o Observador
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15 // O elemento começa a aparecer quando 15% dele estiver na tela
+    threshold: 0.15 
 };
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('active'); // Faz o bloco aparecer
-            observer.unobserve(entry.target); // Anima só na primeira vez
+            entry.target.classList.add('active'); 
+            observer.unobserve(entry.target); 
         }
     });
 }, observerOptions);
@@ -266,3 +263,29 @@ document.querySelectorAll('.reveal').forEach(el => {
     revealObserver.observe(el);
 });
 
+// ==========================================
+// MENU MOBILE (HAMBURGUER)
+// ==========================================
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('menu-aberto');
+        
+        // Troca o ícone (Hamburguer para X e vice-versa)
+        if (navMenu.classList.contains('menu-aberto')) {
+            menuToggle.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        } else {
+            menuToggle.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        }
+    });
+
+    // Fecha o menu automaticamente quando clicar em um link
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', () => {
+            navMenu.classList.remove('menu-aberto');
+            menuToggle.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        });
+    });
+}

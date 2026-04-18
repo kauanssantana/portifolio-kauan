@@ -113,7 +113,7 @@ header .logo .destaque {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Aumentado: afasta mais os links um do outro */
+    gap: 20px; 
     align-items: center;
 }
 
@@ -121,8 +121,8 @@ nav a {
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05rem; /* Aumentado de 0.95rem para facilitar a leitura */
-    padding: 10px 24px; /* Links mais "gordinhos" e clicáveis */
+    font-size: 1.05rem; 
+    padding: 10px 24px; 
     border-radius: 30px; 
     transition: all 0.3s ease;
 }
@@ -1085,6 +1085,67 @@ footer {
 
     .sobre-foto img {
         max-width: 300px; 
+    }
+
+    /* =========================================
+       AJUSTES DO CABEÇALHO E MENU MOBILE
+    ========================================= */
+    header {
+        padding: 20px 25px; /* Reduz o padding para caber na tela */
+    }
+
+    header .logo {
+        font-size: 1.3rem; /* Diminui a fonte para evitar quebra de linha */
+        white-space: nowrap; /* Força a logo a ficar em uma linha só */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão Hamburguer no celular */
+        background: none;
+        border: none;
+        color: var(--text-main);
+        cursor: pointer;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        /* Esconde o menu por padrão */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    /* Classe ativada pelo JavaScript para abrir o menu */
+    nav.menu-aberto {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px 30px 20px;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .settings-menu {
+        justify-content: center;
+        margin-top: 15px;
     }
 }
 
